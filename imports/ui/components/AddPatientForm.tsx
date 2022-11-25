@@ -76,7 +76,7 @@ export const AddPatientForm = () => {
           name="nombres"
           control={control}
           rules={{
-            required: true,
+            required: "Campo requerido",
             minLength: { value: 2, message: "Debe tener mas de 2 caracteres" },
             maxLength: {
               value: 80,
@@ -102,7 +102,7 @@ export const AddPatientForm = () => {
           name="apellidoPaterno"
           control={control}
           rules={{
-            required: true,
+            required: "Campo requerido",
             minLength: { value: 2, message: "Debe tener mas de 2 caracteres" },
             maxLength: {
               value: 80,
@@ -128,7 +128,7 @@ export const AddPatientForm = () => {
           name="apellidoMaterno"
           control={control}
           rules={{
-            required: true,
+            required: "Campo requerido",
             minLength: { value: 2, message: "Debe tener mas de 2 caracteres" },
             maxLength: {
               value: 80,
@@ -154,7 +154,7 @@ export const AddPatientForm = () => {
           name="rut"
           control={control}
           rules={{
-            required: true,
+            required: "Campo requerido",
             minLength: { value: 3, message: "Debe tener mas de 2 digitos" },
             maxLength: { value: 20, message: "Debe tener menos de 20 digitos" },
             //ChangeHandler
@@ -182,7 +182,7 @@ export const AddPatientForm = () => {
           name="region"
           control={control}
           rules={{
-            required: true,
+            required: "Campo requerido",
             validate: (value) => {
               if (value === "Seleccione una region") {
                 return "Seleccione una region";
@@ -208,7 +208,7 @@ export const AddPatientForm = () => {
           name="comuna"
           control={control}
           rules={{
-            required: true,
+            required: "Campo requerido",
             validate: (value) => {
               if (getValues().region === "Seleccione una region") {
                 return "Seleccione una region antes";
@@ -237,7 +237,7 @@ export const AddPatientForm = () => {
           name="codigoPostal"
           control={control}
           rules={{
-            required: true,
+            required: "Campo requerido",
             minLength: { value: 2, message: "Debe tener mas de 2 digitos" },
             maxLength: {
               value: 20,
