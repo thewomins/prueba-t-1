@@ -35,7 +35,13 @@ const Select: React.FC<props> = ({
           onBlur={onBlur}
           value={value}
           onChange={onChange}
-          className="h-full w-full rounded-md border bg-transparent py-1 pl-2 pr-2 border-gray-300 text-gray-700 focus:border-indigo-500 focus:ring-indigo-500">
+          className={`h-full w-full rounded-md border bg-transparent 
+          py-1 pl-2 pr-2 text-gray-700 focus-visible:outline-none
+            ${
+              error
+                ? "focus:border-pink-500 border-pink-400 focus:ring-pink-500"
+                : "focus:border-indigo-500 border-gray-300 focus:ring-indigo-500"
+            }`}>
           <option key="seleccione">{placeholder}</option>
           {options.map((option) => (
             <option key={option}>{option}</option>
