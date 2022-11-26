@@ -7,7 +7,7 @@ import { Select } from "./select";
 import { PatientsCollection } from "/imports/api/patientCollection";
 import Dialog from "./dialog";
 
-type TPaciente = {
+type TPatient = {
   nombres: string;
   apellidoPaterno: string;
   apellidoMaterno: string;
@@ -17,7 +17,7 @@ type TPaciente = {
   codigoPostal: string;
 };
 
-const initialPatient: TPaciente = {
+const initialPatient: TPatient = {
   nombres: "",
   apellidoPaterno: "",
   apellidoMaterno: "",
@@ -35,7 +35,7 @@ export const AddPatientForm = () => {
     formState: { errors },
     control,
     reset,
-  } = useForm<TPaciente>({
+  } = useForm<TPatient>({
     defaultValues: initialPatient,
   });
 
@@ -49,7 +49,7 @@ export const AddPatientForm = () => {
   }, [watch("region")]);
 
   //Format inputs and add patient to the database
-  const onSubmit = (patient: TPaciente) => {
+  const onSubmit = (patient: TPatient) => {
     if (PatientsCollection.findOne({ rut: cleanRut(patient.rut) })) {
       setDialogError(true);
       return;
