@@ -35,7 +35,7 @@ const Input: React.FC<props> = ({
           id={name}
           onBlur={onBlur}
           autoComplete="off"
-          value={value === "-" ? "" : value}
+          value={value}
           onChange={onChange}
           className={`block w-full text-xl rounded-md border 
             focus-visible:outline-none border-gray-300 pl-3 pr-8

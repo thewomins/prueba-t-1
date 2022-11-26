@@ -168,7 +168,7 @@ export const AddPatientForm = () => {
               onBlur={onBlur}
               type="text"
               placeholder="11.111.111-1"
-              value={value}
+              value={value === "-" ? "" : value}
               error={Boolean(errors?.rut)}
               errorMsg={errors?.rut?.message}
               onChange={(event: { target: { value: string } }) => {
