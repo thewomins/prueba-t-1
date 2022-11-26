@@ -3,9 +3,9 @@ import React from "react";
 type props = {
   name: string;
   label: string;
-  onBlur: any;
-  onChange: any;
-  value?: any;
+  onBlur: React.FocusEventHandler<HTMLInputElement>;
+  onChange: React.ChangeEventHandler<HTMLInputElement>;
+  value?: string | number;
   error?: boolean;
   placeholder: string;
   errorMsg?: string;

@@ -3,8 +3,8 @@ import React from "react";
 type props = {
   name: string;
   label: string;
-  onBlur: any;
-  onChange: any;
+  onBlur: React.FocusEventHandler<HTMLSelectElement>;
+  onChange: React.ChangeEventHandler<HTMLSelectElement>;
   options: string[];
   value?: string;
   error?: boolean;
