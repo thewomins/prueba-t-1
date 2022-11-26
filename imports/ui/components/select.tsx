@@ -42,7 +42,7 @@ const Select: React.FC<props> = ({
                 ? "focus:border-pink-500 border-pink-400 focus:ring-pink-500"
                 : "focus:border-indigo-500 border-gray-300 focus:ring-indigo-500"
             }`}>
-          <option key="seleccione">{placeholder}</option>
+          <option>{placeholder}</option>
           {options.map((option) => (
             <option key={option}>{option}</option>
           ))}
