@@ -90,7 +90,7 @@ export const AddPatientForm = () => {
               onBlur={onBlur}
               type="text"
               value={value}
-              placeholder="ppepe lafu"
+              placeholder="Pedro Antonio"
               error={Boolean(errors?.nombres)}
               errorMsg={errors?.nombres?.message}
               onChange={onChange}
@@ -116,7 +116,7 @@ export const AddPatientForm = () => {
               onBlur={onBlur}
               type="text"
               value={value}
-              placeholder="lafu"
+              placeholder="González"
               error={Boolean(errors?.apellidoPaterno)}
               errorMsg={errors?.apellidoPaterno?.message}
               onChange={onChange}
@@ -142,7 +142,7 @@ export const AddPatientForm = () => {
               onBlur={onBlur}
               type="text"
               value={value}
-              placeholder="ñaful"
+              placeholder="Muñoz"
               error={Boolean(errors?.apellidoMaterno)}
               errorMsg={errors?.apellidoMaterno?.message}
               onChange={onChange}
