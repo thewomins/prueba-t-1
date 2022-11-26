@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 import { useTracker } from "meteor/react-meteor-data";
 import { formatRut } from "rutlib/lib";
-import { PatientsCollection, IPatient } from "/imports/api/patientCollection";
+import {
+  PatientsCollection,
+  IPatient,
+} from "../../api/patient/patientCollection";
 import Dialog from "./dialog";
 
 export const ListPatients = () => {

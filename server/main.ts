@@ -1,5 +1,8 @@
 import { Meteor } from "meteor/meteor";
-import { PatientsCollection, IPatient } from "/imports/api/patientCollection";
+import {
+  PatientsCollection,
+  IPatient,
+} from "../imports/api/patient/patientCollection";
 
 async function insertPatient(patient: IPatient) {
   await PatientsCollection.insert(patient);

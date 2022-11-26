@@ -4,7 +4,7 @@ import { useForm, Controller } from "react-hook-form";
 import { Input } from "./input";
 import { getComunas, getRegiones } from "/imports/api/localization";
 import { Select } from "./select";
-import { PatientsCollection } from "/imports/api/patientCollection";
+import { PatientsCollection } from "../../api/patient/patientCollection";
 import Dialog from "./dialog";
 
 type TPatient = {
@@ -43,7 +43,7 @@ export const AddPatientForm = () => {
   const [dialogError, setDialogError] = useState(false);
   const [dialogSuccess, setDialogSuccess] = useState(false);
 
-  //Ve cambios en el input de regiones para obtener comunas
+  //Watch for changes on region selector to get comunas
   useEffect(() => {
     setComunas(getComunas(getValues().region));
   }, [watch("region")]);
