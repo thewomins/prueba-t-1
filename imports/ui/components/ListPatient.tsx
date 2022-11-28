@@ -6,6 +6,9 @@ import {
   IPatient,
 } from "../../api/patient/patientCollection";
 import Dialog from "./dialog";
+import { Meteor } from "meteor/meteor";
+
+Meteor.subscribe("patients");
 
 export const ListPatients = () => {
   const [dialog, setDialog] = useState(false);

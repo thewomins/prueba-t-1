@@ -6,6 +6,7 @@ import { getComunas, getRegiones } from "/imports/api/localization";
 import { Select } from "./select";
 import { PatientsCollection } from "../../api/patient/patientCollection";
 import Dialog from "./dialog";
+import { Meteor } from "meteor/meteor";
 
 type TPatient = {
   nombres: string;
@@ -26,6 +27,8 @@ const initialPatient: TPatient = {
   comuna: "",
   codigoPostal: "",
 };
+
+Meteor.subscribe("patients");
 
 export const AddPatientForm = () => {
   const {
