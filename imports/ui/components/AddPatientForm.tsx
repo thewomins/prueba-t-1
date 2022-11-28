@@ -28,7 +28,7 @@ const initialPatient: TPatient = {
   codigoPostal: "",
 };
 
-Meteor.subscribe("patients");
+Meteor.subscribe("insertPatient");
 
 export const AddPatientForm = () => {
   const {

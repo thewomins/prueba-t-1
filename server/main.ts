@@ -12,6 +12,9 @@ if (Meteor.isServer) {
   Meteor.publish("patients", function () {
     return PatientsCollection.find();
   });
+  Meteor.publish("addPatient", function (patient) {
+    return PatientsCollection.insert(patient);
+  });
 }
 Meteor.startup(async () => {
   if (PatientsCollection.find().count() === 0) {
